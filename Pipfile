@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+typer = "==0.24.1"
+
+[dev-packages]
+pytest = "==9.0.2"
+build = "==1.4.0"
+pre-commit = "==3.7.1"
+twine = "==6.2.0"
+
+[requires]
+python_version = "3.12"
