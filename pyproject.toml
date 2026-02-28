@@ -1,0 +1,14 @@
+[project]
+name = "ciopen"
+version = "0.0.2"
+description = "Open CI pipelines from your current Git repository"
+requires-python = ">=3.10"
+authors = [{ name = "Mel Cadano" }]
+dependencies = ["typer>=0.24.1"]
+
+[project.scripts]
+ciopen = "ciopen.cli:app"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
