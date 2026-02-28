@@ -102,11 +102,13 @@ ciopen doctor
 
 `ciopen` is open for contributions!
 
-1. Fork the rep
-2. Make your changes
-3. Submit a Pull Request
-
 All contributions are welcome — whether it’s new features, bug fixes, or improving docs.
+
+1. Clone the repository: `git clone https://github.com/mel-cdn/ciopen.git`
+2. Create a new branch: `git checkout -b my-new-feature`
+3. Install dependencies: `./run-checks.sh`
+4. Make your changes
+5. Submit a pull request
 
 ---
 Made with ❤️ for developers who love fast, terminal-first CI access.
