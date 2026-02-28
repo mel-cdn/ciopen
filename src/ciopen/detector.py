@@ -1,6 +1,7 @@
 import typer
 
 from ciopen.git import get_remote_url
+from ciopen.providers.azure_devops import AzureDevOpsProvider
 from ciopen.providers.bitbucket import BitbucketProvider
 from ciopen.providers.github import GitHubProvider
 
@@ -17,6 +18,7 @@ def detect_provider():
     provider_registry = (
         ("github.com", GitHubProvider),
         ("bitbucket.org", BitbucketProvider),
+        ("dev.azure.com", AzureDevOpsProvider),
     )
 
     for domain, provider_cls in provider_registry:
