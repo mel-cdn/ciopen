@@ -1,6 +1,6 @@
 [project]
 name = "ciopen"
-version = "0.0.2"
+version = "0.0.3"
 description = "Open CI pipelines from your current Git repository"
 requires-python = ">=3.10"
 authors = [{ name = "Mel Cadano" }]

@@ -91,7 +91,6 @@ ciopen doctor
 
 ## 🔮 Future Plans
 
-- Add support for additional CI/CD providers (GitLab, Azure Pipelines, etc.)
 - Add support for custom CI/CD providers e.g. CircleCI, Jenkins, AWS CodeBuild, etc.
 - JSON output for scripts and automation
 - Auto-detect Git branch and multiple pipelines
