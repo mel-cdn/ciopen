@@ -21,3 +21,7 @@ class BaseProvider(ABC):
     @abstractmethod
     def pipeline_url(self) -> str:
         ...
+
+    @abstractmethod
+    def pull_request_url(self) -> str:
+        ...

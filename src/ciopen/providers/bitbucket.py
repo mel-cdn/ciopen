@@ -32,3 +32,7 @@ class BitbucketProvider(BaseProvider):
     @property
     def pipeline_url(self) -> str:
         return f"https://bitbucket.org/{self.repo_path}/pipelines"
+
+    @property
+    def pull_request_url(self) -> str:
+        return f"https://bitbucket.org/{self.repo_path}/pull-requests"

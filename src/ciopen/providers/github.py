@@ -32,3 +32,7 @@ class GitHubProvider(BaseProvider):
     @property
     def pipeline_url(self) -> str:
         return f"https://github.com/{self.repo_path}/actions"
+
+    @property
+    def pull_request_url(self) -> str:
+        return f"https://github.com/{self.repo_path}/pulls"
