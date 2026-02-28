@@ -9,6 +9,7 @@ from ciopen.git import (
     get_version,
     is_inside_git_repo,
 )
+from ciopen.providers.base import BaseProvider
 
 
 def doctor_command() -> None:
@@ -58,24 +59,16 @@ def doctor_command() -> None:
     # -- 6. Show detailed info only if everything important passed
     if provider:
         try:
-            _show_results(
-                provider_name=provider.name,
-                repository=extract_repository_slug(remote_url=provider.remote_url),
-                branch=get_current_branch(),
-                pipeline_url=provider.pipeline_url,
-            )
+            _show_results(provider=provider)
         except Exception:
             typer.echo("\n⚠️  Unable to compute full environment details.")
 
 
-def _show_results(
-    provider_name: str,
-    repository: str,
-    branch: str,
-    pipeline_url: str,
-) -> None:
+def _show_results(provider: BaseProvider) -> None:
     typer.echo("\nEnvironment details:\n")
-    typer.echo(f"Detected provider: {provider_name}")
-    typer.echo(f"Repository: {repository}")
-    typer.echo(f"Current branch: {branch}")
-    typer.echo(f"Pipeline URL: {pipeline_url}")
+    typer.echo(f"Provider\t: {provider.name}")
+    typer.echo(f"Repository\t: {extract_repository_slug(remote_url=provider.remote_url)}")
+    typer.echo(f"Current branch\t: {get_current_branch()}")
+    typer.echo(f"Repository URL\t: {provider.repository_url}")
+    typer.echo(f"Pipeline URL\t: {provider.pipeline_url}")
+    typer.echo(f"Pull Request URL: {provider.pull_request_url}")
