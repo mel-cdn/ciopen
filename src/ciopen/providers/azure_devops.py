@@ -1,3 +1,5 @@
+from urllib.parse import urlparse
+
 from ciopen.providers.base import BaseProvider
 
 
@@ -22,12 +24,11 @@ class AzureDevOpsProvider(BaseProvider):
             path = path.removeprefix("v3/")
             return path
 
-        # HTTPS formats:
+        # HTTPS formats (optionally with userinfo like `org@` in the netloc):
         # - https://dev.azure.com/org/project/_git/repo
         # - https://org@dev.azure.com/org/project/_git/repo
-        path = url.split("dev.azure.com/")[1]
-        if path.startswith(tuple(f"{c}@" for c in path.split("@", 1)[:1])) and "@" in path:
-            path = path.split("@", 1)[1]
+        parsed = urlparse(url)
+        path = parsed.path.lstrip("/")  # org/project/_git/repo
         return path.removesuffix(".git")
 
     @property
