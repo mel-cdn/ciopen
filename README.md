@@ -55,15 +55,15 @@ Show helpful CLI documentation:
 
 ```bash
 ciopen --help
+# Usage: ciopen [OPTIONS] COMMAND [ARGS]...
+...
 ```
 
 Open your pipeline (default):
 
 ```bash
 ciopen repo
-# Usage: ciopen [OPTIONS] COMMAND [ARGS]...
 # Quickly open CI pipelines from your Git repository.  
-...  
 ```
 
 Check if it's going to work with diagnostics:
