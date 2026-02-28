@@ -4,6 +4,7 @@ from ciopen.git import get_remote_url
 from ciopen.providers.azure_devops import AzureDevOpsProvider
 from ciopen.providers.bitbucket import BitbucketProvider
 from ciopen.providers.github import GitHubProvider
+from ciopen.providers.gitlab import GitLabProvider
 
 
 def detect_provider():
@@ -19,6 +20,7 @@ def detect_provider():
         ("github.com", GitHubProvider),
         ("bitbucket.org", BitbucketProvider),
         ("dev.azure.com", AzureDevOpsProvider),
+        ("gitlab.com", GitLabProvider),
     )
 
     for domain, provider_cls in provider_registry:
