@@ -1,7 +1,8 @@
 [project]
 name = "ciopen"
-version = "0.0.3"
+version = "0.0.4"
 description = "Open CI pipelines from your current Git repository"
+readme = { file = "README.md", content-type = "text/markdown" }
 requires-python = ">=3.10"
 authors = [{ name = "Mel Cadano" }]
 dependencies = ["typer>=0.24.1"]
