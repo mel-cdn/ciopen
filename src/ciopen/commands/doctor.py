@@ -54,7 +54,7 @@ def doctor_command() -> None:
     # -- 5. Print diagnostics results
     for label, ok in checks:
         status = "✅" if ok else "❌"
-        typer.echo(f"{status} {label}")
+        typer.echo(f" {status} {label}")
 
     # -- 6. Show detailed info only if everything important passed
     if provider:
@@ -68,7 +68,7 @@ def _show_results(provider: BaseProvider) -> None:
     typer.echo("\nEnvironment details:\n")
     typer.echo(f"Provider\t\t: {provider.name}")
     typer.echo(f"Repository slug\t\t: {extract_repository_slug(remote_url=provider.remote_url)}")
-    typer.echo(f"Current branch\t: {get_current_branch()}")
-    typer.echo(f"Repository URL\t: {provider.repository_url}")
-    typer.echo(f"Pipeline URL\t: {provider.pipeline_url}")
-    typer.echo(f"Pull Request URL: {provider.pull_request_url}")
+    typer.echo(f"Current branch\t\t: {get_current_branch()}")
+    typer.echo(f"Repository URL\t\t: {provider.repository_url}")
+    typer.echo(f"Pipeline URL\t\t: {provider.pipeline_url}")
+    typer.echo(f"Pull Request URL\t: {provider.pull_request_url}")

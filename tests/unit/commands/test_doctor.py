@@ -50,10 +50,10 @@ def test_doctor_command_happy_path_prints_checks_and_environment_details(
         call("\nEnvironment details:\n"),
         call(f"Provider\t\t: {provider.name}"),
         call("Repository slug\t\t: org/repo"),
-        call("Current branch\t: main"),
-        call("Repository URL\t: https://github.com/org/repo"),
-        call("Pipeline URL\t: https://github.com/org/repo/actions"),
-        call("Pull Request URL: https://github.com/org/repo/pulls"),
+        call("Current branch\t\t: main"),
+        call("Repository URL\t\t: https://github.com/org/repo"),
+        call("Pipeline URL\t\t: https://github.com/org/repo/actions"),
+        call("Pull Request URL\t: https://github.com/org/repo/pulls"),
     ]
 
     # Ensure that everything is called correctly

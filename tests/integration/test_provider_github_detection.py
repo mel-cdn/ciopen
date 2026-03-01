@@ -29,7 +29,7 @@ def test_doctor_command_detects_github_repo(fx_git_repo, fx_cli_runner, valid_re
     assert "Environment details" in result.output
     assert "Provider\t\t: GitHub" in result.output
     assert "Repository slug\t\t: org/repo" in result.output
-    assert "Current branch\t: main" in result.output
-    assert "Repository URL\t: https://github.com/org/repo" in result.output
-    assert "Pipeline URL\t: https://github.com/org/repo/actions" in result.output
-    assert "Pull Request URL: https://github.com/org/repo/pulls" in result.output
+    assert "Current branch\t\t: main" in result.output
+    assert "Repository URL\t\t: https://github.com/org/repo" in result.output
+    assert "Pipeline URL\t\t: https://github.com/org/repo/actions" in result.output
+    assert "Pull Request URL\t: https://github.com/org/repo/pulls" in result.output

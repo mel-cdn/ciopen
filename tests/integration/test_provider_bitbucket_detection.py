@@ -29,7 +29,7 @@ def test_doctor_command_detects_bitbucket_repo(fx_git_repo, fx_cli_runner, valid
     assert "Environment details" in result.output
     assert "Provider\t\t: Bitbucket" in result.output
     assert "Repository slug\t\t: workspace/repo" in result.output
-    assert "Current branch\t: main" in result.output
-    assert "Repository URL\t: https://bitbucket.org/workspace/repo" in result.output
-    assert "Pipeline URL\t: https://bitbucket.org/workspace/repo/pipelines" in result.output
-    assert "Pull Request URL: https://bitbucket.org/workspace/repo/pull-requests" in result.output
+    assert "Current branch\t\t: main" in result.output
+    assert "Repository URL\t\t: https://bitbucket.org/workspace/repo" in result.output
+    assert "Pipeline URL\t\t: https://bitbucket.org/workspace/repo/pipelines" in result.output
+    assert "Pull Request URL\t: https://bitbucket.org/workspace/repo/pull-requests" in result.output

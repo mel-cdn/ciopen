@@ -29,7 +29,7 @@ def test_doctor_command_detects_gitlab_repo(fx_git_repo, fx_cli_runner, valid_re
     assert "Environment details" in result.output
     assert "Provider\t\t: Azure DevOps" in result.output
     assert "Repository slug\t\t: org/project/repo" in result.output
-    assert "Current branch\t: main" in result.output
-    assert "Repository URL\t: https://dev.azure.com/org/project/_git/repo" in result.output
-    assert "Pipeline URL\t: https://dev.azure.com/org/project/_build" in result.output
-    assert "Pull Request URL: https://dev.azure.com/org/project/_git/repo/pullrequests" in result.output
+    assert "Current branch\t\t: main" in result.output
+    assert "Repository URL\t\t: https://dev.azure.com/org/project/_git/repo" in result.output
+    assert "Pipeline URL\t\t: https://dev.azure.com/org/project/_build" in result.output
+    assert "Pull Request URL\t: https://dev.azure.com/org/project/_git/repo/pullrequests" in result.output

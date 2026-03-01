@@ -29,7 +29,7 @@ def test_doctor_command_detects_gitlab_repo(fx_git_repo, fx_cli_runner, valid_re
     assert "Environment details" in result.output
     assert "Provider\t\t: GitLab" in result.output
     assert "Repository slug\t\t: org/repo" in result.output
-    assert "Current branch\t: main" in result.output
-    assert "Repository URL\t: https://gitlab.com/org/repo" in result.output
-    assert "Pipeline URL\t: https://gitlab.com/org/repo/-/pipelines" in result.output
-    assert "Pull Request URL: https://gitlab.com/org/repo/-/merge_requests" in result.output
+    assert "Current branch\t\t: main" in result.output
+    assert "Repository URL\t\t: https://gitlab.com/org/repo" in result.output
+    assert "Pipeline URL\t\t: https://gitlab.com/org/repo/-/pipelines" in result.output
+    assert "Pull Request URL\t: https://gitlab.com/org/repo/-/merge_requests" in result.output
