@@ -76,10 +76,12 @@ ciopen --help
  ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
-Open your pipeline (default):
+Open your repository's main page:
 
 ```bash
 ciopen repo
+
+ Opening https://github.com/mel-cdn/ciopen
 ```
 
 Check if it's going to work with diagnostics:
