@@ -34,3 +34,4 @@ branch = "main"
 version_source = "tag"
 upload_to_pypi = false
 major_on_zero = false
+changelog_file = "CHANGELOG.md"
