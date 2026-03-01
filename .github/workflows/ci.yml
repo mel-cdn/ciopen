@@ -55,6 +55,9 @@ jobs:
       name: build
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
 
       - uses: actions/setup-python@v5
         with:
@@ -78,7 +81,7 @@ jobs:
     runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/tags/v')
     environment:
-      name: production  # Will require manual approval if environment has protection rules
+      name: deployment  # Will require manual approval if environment has protection rules
     steps:
       - name: Checkout
         uses: actions/checkout@v4
