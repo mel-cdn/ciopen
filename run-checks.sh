@@ -13,4 +13,8 @@ pre-commit run --all-files
 echo "> Running tests..."
 ./run-tests.sh
 
+echo "> Running integration tests..."
+export PYTHONPATH=src
+python -m pytest tests/integration
+
 echo "> Done!"

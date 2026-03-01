@@ -8,7 +8,6 @@ export PYTHONPATH=src
 export DISABLE_CACHE=True
 
 echo "> Running unit tests with coverage threshold: $THRESHOLD%"
-
 python -m pytest \
   --cov-config=.coveragerc \
   --cov=ciopen \
