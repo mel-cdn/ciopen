@@ -60,6 +60,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install build twine
 
+      - name: Auto bump version
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          extra_packages: python-semantic-release
+          branch: main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Build package
         run: python -m build
 
