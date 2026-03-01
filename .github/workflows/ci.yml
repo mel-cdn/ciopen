@@ -7,11 +7,14 @@ on:
       - "v*"
   pull_request:
 
+permissions:
+  contents: write  # REQUIRED for semantic-release to push commits & tags
+
+
 jobs:
   test:
     name: Run Tests
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -39,10 +42,10 @@ jobs:
           python -m pytest tests/integration
 
   release:
+    name: Bump Version
     needs: test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-
     steps:
       - uses: actions/checkout@v4
         with:
@@ -68,7 +71,6 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/v')
     environment:
       name: production  # GitHub will require manual approval if environment has protection rules
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
