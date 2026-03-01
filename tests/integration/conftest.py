@@ -37,6 +37,7 @@ def fx_git_repo(tmp_path: Path) -> Path:
 
     # Create repo file and commit
     (repo_dir / "README.md").write_text("# Temp Repo")
+    _git(repo_dir, "checkout", "-b", "main")
     _git(repo_dir, "add", ".")
     _git(repo_dir, "commit", "-m", "Initial commit")
 
