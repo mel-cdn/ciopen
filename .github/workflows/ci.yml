@@ -60,11 +60,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install build twine
 
+      - name: Install semantic-release
+        run: pip install python-semantic-release
+
       - name: Auto bump version
-        uses: cycjimmy/semantic-release-action@v2
-        with:
-          extra_packages: python-semantic-release
-          branch: main
+        run: semantic-release version
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

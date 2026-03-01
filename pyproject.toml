@@ -27,3 +27,9 @@ dev = [
     "pre-commit==4.5.1",
     "conventional-pre-commit==4.4.0",
 ]
+
+# Semantic versioning
+[tool.semantic_release]
+branch = "main"
+version_source = "tag"
+upload_to_pypi = false
