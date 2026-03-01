@@ -3,9 +3,9 @@ name: Publish to PyPI
 on:
   push:
     branches: [ main ]
+    tags:
+      - "v*"
   pull_request:
-  release:
-    types: [ published ]
 
 jobs:
   test:
@@ -42,9 +42,9 @@ jobs:
     name: Publish to PyPI
     needs: test
     runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')  # only runs on tags
     environment:
-      # GitHub will require manual approval if environment has protection rules
-      name: production
+      name: production  # GitHub will require manual approval if environment has protection rules
 
     steps:
       - name: Checkout
