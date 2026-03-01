@@ -3,8 +3,6 @@ name: Publish to PyPI
 on:
   push:
     branches: [ main ]
-    tags:
-      - "v*"
   pull_request:
 
 permissions:
@@ -47,10 +45,11 @@ jobs:
   # ---------------------------------
   # Bump Version
   # ---------------------------------
-  release:
+  versioning:
     name: Bump Version
     needs: test
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     environment:
       name: build
     steps:
