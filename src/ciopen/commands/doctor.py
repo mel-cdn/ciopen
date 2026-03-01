@@ -66,8 +66,8 @@ def doctor_command() -> None:
 
 def _show_results(provider: BaseProvider) -> None:
     typer.echo("\nEnvironment details:\n")
-    typer.echo(f"Provider\t: {provider.name}")
-    typer.echo(f"Repository\t: {extract_repository_slug(remote_url=provider.remote_url)}")
+    typer.echo(f"Provider\t\t: {provider.name}")
+    typer.echo(f"Repository slug\t\t: {extract_repository_slug(remote_url=provider.remote_url)}")
     typer.echo(f"Current branch\t: {get_current_branch()}")
     typer.echo(f"Repository URL\t: {provider.repository_url}")
     typer.echo(f"Pipeline URL\t: {provider.pipeline_url}")

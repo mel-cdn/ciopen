@@ -1,4 +1,3 @@
-# tests/unit/commands/test_doctor.py
 from unittest.mock import Mock, call, patch
 
 from ciopen.commands.doctor import doctor_command
@@ -49,8 +48,8 @@ def test_doctor_command_happy_path_prints_checks_and_environment_details(
         call("✅ Remote origin found"),
         call("✅ CI Provider detected"),
         call("\nEnvironment details:\n"),
-        call(f"Provider\t: {provider.name}"),
-        call("Repository\t: org/repo"),
+        call(f"Provider\t\t: {provider.name}"),
+        call("Repository slug\t\t: org/repo"),
         call("Current branch\t: main"),
         call("Repository URL\t: https://github.com/org/repo"),
         call("Pipeline URL\t: https://github.com/org/repo/actions"),
@@ -190,8 +189,8 @@ def test_doctor_command_when_show_results_fails_prints_warning(
         call("✅ Remote origin found"),
         call("✅ CI Provider detected"),
         call("\nEnvironment details:\n"),
-        call(f"Provider\t: {provider.name}"),
-        call("Repository\t: org/repo"),
+        call(f"Provider\t\t: {provider.name}"),
+        call("Repository slug\t\t: org/repo"),
         call("\n⚠️  Unable to compute full environment details."),
     ]
 
