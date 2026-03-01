@@ -43,10 +43,10 @@ def test_doctor_command_happy_path_prints_checks_and_environment_details(
     assert m_echo.mock_calls == [
         call("ciopen 1.2.3"),
         call("Running diagnostics...\n"),
-        call("✅ Git installed"),
-        call("✅ Inside a Git repository"),
-        call("✅ Remote origin found"),
-        call("✅ CI Provider detected"),
+        call(" ✅ Git installed"),
+        call(" ✅ Inside a Git repository"),
+        call(" ✅ Remote origin found"),
+        call(" ✅ CI Provider detected"),
         call("\nEnvironment details:\n"),
         call(f"Provider\t\t: {provider.name}"),
         call("Repository slug\t\t: org/repo"),
@@ -89,9 +89,9 @@ def test_doctor_command_when_remote_missing_skips_provider_and_details(
     assert m_echo.mock_calls == [
         call("ciopen 1.2.3"),
         call("Running diagnostics...\n"),
-        call("❌ Git installed"),
-        call("❌ Inside a Git repository"),
-        call("❌ Remote origin found"),
+        call(" ❌ Git installed"),
+        call(" ❌ Inside a Git repository"),
+        call(" ❌ Remote origin found"),
     ]
 
     # Ensure that everything is called correctly
@@ -130,10 +130,10 @@ def test_doctor_command_with_remote_but_no_provider_skips_details(
     assert m_echo.mock_calls == [
         call("ciopen 1.2.3"),
         call("Running diagnostics...\n"),
-        call("❌ Git installed"),
-        call("❌ Inside a Git repository"),
-        call("✅ Remote origin found"),
-        call("❌ CI Provider detection failed"),
+        call(" ❌ Git installed"),
+        call(" ❌ Inside a Git repository"),
+        call(" ✅ Remote origin found"),
+        call(" ❌ CI Provider detection failed"),
     ]
 
     # Ensure that everything is called correctly
@@ -184,10 +184,10 @@ def test_doctor_command_when_show_results_fails_prints_warning(
     assert m_echo.mock_calls == [
         call("ciopen 1.2.3"),
         call("Running diagnostics...\n"),
-        call("✅ Git installed"),
-        call("✅ Inside a Git repository"),
-        call("✅ Remote origin found"),
-        call("✅ CI Provider detected"),
+        call(" ✅ Git installed"),
+        call(" ✅ Inside a Git repository"),
+        call(" ✅ Remote origin found"),
+        call(" ✅ CI Provider detected"),
         call("\nEnvironment details:\n"),
         call(f"Provider\t\t: {provider.name}"),
         call("Repository slug\t\t: org/repo"),

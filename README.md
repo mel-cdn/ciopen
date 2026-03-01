@@ -4,13 +4,15 @@
 ![Python](https://img.shields.io/badge/python-%3E%3D3.10-brightgreen)
 ![GitHub Workflow](https://img.shields.io/github/actions/workflow/status/mel-cdn/ciopen/python.yml?label=build)
 
-
 Quickly open CI pipelines from your Git repository.
 
 `ciopen` lets you open your CI pipelines or repository pages straight from the terminal — works with GitHub, GitLab,
 Bitbucket, Azure DevOps (and more coming soon!).
 
-[Checkout ciopen on PyPI](https://pypi.org/project/ciopen/)
+Check out the docs:
+
+- [PyPI](https://pypi.org/project/ciopen/)
+- [GitHub](https://github.com/mel-cdn/ciopen/)
 
 ---
 
@@ -34,20 +36,20 @@ ciopen
 
 ### Using `pip`
 
-
 ```bash
 pip install ciopen
 ```
 
 ### Using pip (editable / dev mode)
+
 ```bash
 git clone https://github.com/mel-cdn/ciopen.git
 cd ciopen
 pipenv shell        # or activate your virtualenv
 pip install -e .
 ```
----
 
+---
 
 ## 🛠️ Usage Examples
 
@@ -56,14 +58,27 @@ Show helpful CLI documentation:
 ```bash
 ciopen --help
 # Usage: ciopen [OPTIONS] COMMAND [ARGS]...
-...
+
+# Quickly open CI pipelines from your Git repository.
+
+╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell                                        │
+│ --show-completion             Show completion for the current shell, to copy it or customize the installation.│
+│ --help                        Show this message and exit                                                      │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ version   Show ciopen version                                                                                 │
+│ doctor    Check if everything is set up right                                                                 │
+│ provider  Show which CI provider is detected                                                                  │
+│ repo      Open the main page of this repository                                                               │
+│ pr        Open the pull requests page of this repository                                                      │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
 Open your pipeline (default):
 
 ```bash
 ciopen repo
-# Quickly open CI pipelines from your Git repository.  
 ```
 
 Check if it's going to work with diagnostics:

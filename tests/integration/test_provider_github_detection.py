@@ -20,10 +20,10 @@ def test_doctor_command_detects_github_repo(fx_git_repo, fx_cli_runner, valid_re
         result = fx_cli_runner.invoke(cli.app, ["doctor"])
 
     assert result.exit_code == 0
-    assert "✅ Git installed" in result.output
-    assert "✅ Inside a Git repository" in result.output
-    assert "✅ Remote origin found" in result.output
-    assert "✅ CI Provider detected" in result.output
+    assert " ✅ Git installed" in result.output
+    assert " ✅ Inside a Git repository" in result.output
+    assert " ✅ Remote origin found" in result.output
+    assert " ✅ CI Provider detected" in result.output
 
     # Details section should appear
     assert "Environment details" in result.output
