@@ -17,6 +17,7 @@ jobs:
   test:
     name: Run Tests
     runs-on: ubuntu-latest
+    if: github.ref_type == 'branch' && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -50,8 +51,6 @@ jobs:
     name: Bump Version
     needs: test
     runs-on: ubuntu-latest
-    # Only run on main branch and NOT tags
-    if: github.ref_type == 'branch' && github.ref == 'refs/heads/main'
     environment:
       name: build
     steps:
@@ -69,7 +68,7 @@ jobs:
           pip install python-semantic-release
 
       - name: Auto bump version
-        run: semantic-release version
+        run: semantic-release version --patch
         env:
           GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
 
@@ -79,7 +78,6 @@ jobs:
   # ---------------------------------
   publish:
     name: Publish to PyPI
-    needs: test
     runs-on: ubuntu-latest
     # Only run on tags
     if: startsWith(github.ref, 'refs/tags/v')

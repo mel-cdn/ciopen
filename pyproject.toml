@@ -29,23 +29,20 @@ dev = [
 ]
 
 # Semantic versioning
-# We'll stay to experimental/patch for now until everything is good.
 [tool.semantic_release]
 branch = "main"
 version_source = "tag"
 upload_to_pypi = false
 major_on_zero = true
 changelog_file = "CHANGELOG.md"
-default_bump = "patch"
-commit_parser = "angular"
 
 version_toml = [
     "pyproject.toml:project.version",
 ]
 
+# Optional: override commit parsing
 [tool.semantic_release.commit_parser_options]
-# Disable major/minor bumps entirely; everything becomes patch (or no-release if you choose).
-ignore_breaking_changes = true
-major_tags = []
-minor_tags = []
-patch_tags = ["fix", "feat", "chore", "docs", "refactor", "perf", "style", "test", "ci", "build"]
+patch_types = ["fix", "chore", "docs", "style", "refactor", "test"]
+minor_types = ["feat"]
+# Will never be used while major_on_zero = false
+major_types = ["feat!"]
