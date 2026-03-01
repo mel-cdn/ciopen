@@ -22,6 +22,13 @@ def extract_repository_slug(remote_url: str) -> str:
     slug = remote_url.rstrip(".git")
     # Remove protocol/host
     slug = re.sub(r"^(git@[^:]+:|https://[^/]+/)", "", slug)
+
+    # Azure DevOps SSH remotes have an extra `v3/` prefix:
+    # git@ssh.dev.azure.com:v3/org/project/repo  -> org/project/repo
+    # org/project/_git/repo -> org/project/repo
+    slug = slug.removeprefix("v3/")
+    slug = slug.replace("/_git/", "/")
+
     return slug
 
 

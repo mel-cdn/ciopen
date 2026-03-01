@@ -25,10 +25,12 @@ def test__run_command_invokes_git_and_strips_stdout(m_run):
 @pytest.mark.parametrize(
     argnames=["remote_url", "expected_slug"],
     argvalues=[
-        ("https://github.com/user/repo.git", "user/repo"),
-        ("https://github.com/user/repo", "user/repo"),
-        ("git@github.com:user/repo.git", "user/repo"),
-        ("git@github.com:user/repo", "user/repo"),
+        ("https://github.com/org/repo.git", "org/repo"),
+        ("https://github.com/org/repo", "org/repo"),
+        ("git@github.com:org/repo.git", "org/repo"),
+        ("git@github.com:org/repo", "org/repo"),
+        ("git@ssh.dev.azure.com:v3/org/project/repo", "org/project/repo"),
+        ("https://dev.azure.com/org/project/_git/repo.git", "org/project/repo"),
     ],
 )
 def test_extract_repository_slug_common_urls(remote_url, expected_slug):

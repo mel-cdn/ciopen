@@ -11,7 +11,7 @@ from ciopen.providers.azure_devops import AzureDevOpsProvider
         ("https://org@dev.azure.com/org/project/_git/repo", "org/project/_git/repo"),
         ("git@ssh.dev.azure.com:v3/org/project/repo", "org/project/repo"),
     ],
-    ids=["HTTPS", "HTTPS with .git", "HTTPS with user@", "SSH"],
+    ids=["HTTPS", "HTTPS with .git", "HTTPS with org@", "SSH"],
 )
 def test_azure_devops_provider_extracts_repo_path(remote_url, expected_repo_path):
     provider = AzureDevOpsProvider(remote_url=remote_url)
