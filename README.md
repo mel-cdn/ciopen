@@ -1,8 +1,8 @@
 # ciopen
 
-[![PyPI](https://img.shields.io/pypi/v/ciopen?color=blue&label=PyPI)](https://pypi.org/project/ciopen/)
-![Python](https://img.shields.io/badge/python-%3E%3D3.11-brightgreen)
-[![PyPi Deployment](https://github.com/mel-cdn/ciopen/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/mel-cdn/ciopen/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/python-3.11+-blue?logo=python&logoColor=yellow)
+[![PyPI](https://img.shields.io/pypi/v/ciopen?logo=pypi&logoColor=blue)](https://pypi.org/project/ciopen/)
+[![Build](https://github.com/mel-cdn/ciopen/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/mel-cdn/ciopen/actions/workflows/ci.yml)
 
 Quickly open CI pipelines from your Git repository.
 
