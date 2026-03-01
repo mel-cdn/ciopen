@@ -3,6 +3,8 @@ name: Publish to PyPI
 on:
   push:
     branches: [ main ]
+    tags:
+      - "v*"
   pull_request:
 
 permissions:
@@ -67,7 +69,7 @@ jobs:
           pip install python-semantic-release
 
       - name: Auto bump version
-        run: semantic-release version --patch
+        run: semantic-release version
         env:
           GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
 

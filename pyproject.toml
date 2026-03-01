@@ -9,8 +9,13 @@ name = "ciopen"
 version = "0.0.4"
 description = "Open CI pipelines from your current Git repository"
 readme = { file = "README.md", content-type = "text/markdown" }
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Mel Cadano", email = "mel.cdn@outlook.ph" },
+]
+
 requires-python = ">=3.11"
-authors = [{ name = "Mel Cadano" }]
 dependencies = [
     "typer>=0.24.1"
 ]
