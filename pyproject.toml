@@ -29,9 +29,19 @@ dev = [
 ]
 
 # Semantic versioning
+# We'll stay to experimental/patch for now until everything is good.
 [tool.semantic_release]
 branch = "main"
 version_source = "tag"
 upload_to_pypi = false
-major_on_zero = false
+major_on_zero = true
 changelog_file = "CHANGELOG.md"
+default_bump = "patch"
+
+[tool.semantic_release.commit_parser_options]
+# Disable major/minor bumps entirely; everything becomes patch (or no-release if you choose).
+major_tags = []
+minor_tags = []
+
+# Treat these commit types as PATCH bumps (including "feat")
+patch_tags = ["fix", "feat", "chore", "docs", "refactor", "perf", "style", "test", "ci", "build"]

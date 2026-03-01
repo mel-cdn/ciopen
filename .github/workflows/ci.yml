@@ -53,8 +53,6 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # REQUIRED for semantic-release
 
       - uses: actions/setup-python@v5
         with:
@@ -62,8 +60,7 @@ jobs:
 
       - name: Install semantic-release
         run: |
-          pip install python-semantic-release>=8.0.0
-          semantic-release --version
+          pip install python-semantic-release
 
       - name: Auto bump version
         run: semantic-release version
