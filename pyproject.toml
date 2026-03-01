@@ -10,9 +10,7 @@ dependencies = ["typer>=0.24.1"]
 [project.scripts]
 ciopen = "ciopen.cli:app"
 
-[build-system]
-requires = ["setuptools>=61"]
-build-backend = "setuptools.build_meta"
+
 
 [project.optional-dependencies]
 dev = [
@@ -20,5 +18,10 @@ dev = [
     "pytest-cov==7.0.0",
     "pre-commit==4.5.1",
     "conventional-pre-commit==4.4.0",
-    "twine==6.2.0"
+    "twine==6.2.0",
+    "build==1.4.0",
 ]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
