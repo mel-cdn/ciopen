@@ -46,7 +46,7 @@ pip install ciopen
 git clone https://github.com/mel-cdn/ciopen.git
 cd ciopen
 pipenv shell        # or activate your virtualenv
-pip install -e .
+./run-checks.sh      # Install all dependencies
 ```
 
 ---
@@ -57,22 +57,23 @@ Show helpful CLI documentation:
 
 ```bash
 ciopen --help
-# Usage: ciopen [OPTIONS] COMMAND [ARGS]...
 
-# Quickly open CI pipelines from your Git repository.
+ Usage: ciopen [OPTIONS] COMMAND [ARGS]...
 
-╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ --install-completion          Install completion for the current shell                                        │
-│ --show-completion             Show completion for the current shell, to copy it or customize the installation.│
-│ --help                        Show this message and exit                                                      │
-╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-╭─ Commands ────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ version   Show ciopen version                                                                                 │
-│ doctor    Check if everything is set up right                                                                 │
-│ provider  Show which CI provider is detected                                                                  │
-│ repo      Open the main page of this repository                                                               │
-│ pr        Open the pull requests page of this repository                                                      │
-╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ Quickly open CI pipelines from your Git repository.
+
+ ╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │ --install-completion          Install completion for the current shell                                        │
+ │ --show-completion             Show completion for the current shell, to copy it or customize the installation.│
+ │ --help                        Show this message and exit                                                      │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ ╭─ Commands ────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │ version   Show ciopen version                                                                                 │
+ │ doctor    Check if everything is set up right                                                                 │
+ │ provider  Show which CI provider is detected                                                                  │
+ │ repo      Open the main page of this repository                                                               │
+ │ pr        Open the pull requests page of this repository                                                      │
+ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
 Open your pipeline (default):
@@ -85,14 +86,23 @@ Check if it's going to work with diagnostics:
 
 ```bash
 ciopen doctor
-# ✅ Git installed
-# ✅ Inside a Git repository
-# ✅ Remote origin found
-# ✅ CI Provider detected
-# Detected provider: GitHub
-# Repository: mel-cdn/ciopen
-# Current branch: main
-# Pipeline URL: https://github.com/mel-cdn/ciopen/actions
+
+ ciopen 0.0.5
+ Running diagnostics...
+
+  ✅ Git installed
+  ✅ Inside a Git repository
+  ✅ Remote origin found
+  ✅ CI Provider detected
+
+ Environment details:
+
+ Provider                : GitHub
+ Repository slug         : mel-cdn/ciopen
+ Current branch          : main
+ Repository URL          : https://github.com/mel-cdn/ciopen
+ Pipeline URL            : https://github.com/mel-cdn/ciopen/actions
+ Pull Request URL        : https://github.com/mel-cdn/ciopen/pulls
 ```
 
 ---

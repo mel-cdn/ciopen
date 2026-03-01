@@ -3,7 +3,7 @@
 set -e -u
 
 echo "> Installing Python dependencies..."
-pipenv install --dev
+pip install -e ".[dev]"
 
 echo "> Installing pre-commit..."
 pre-commit install
