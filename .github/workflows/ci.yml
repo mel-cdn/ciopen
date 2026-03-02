@@ -51,7 +51,6 @@ jobs:
     name: Bump Version
     needs: test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
     environment:
       name: build
     steps:
@@ -66,7 +65,7 @@ jobs:
 
       - name: Install semantic-release
         run: |
-          pip install python-semantic-release
+          pip install python-semantic-release==10.5.3
 
       - name: Auto bump version
         run: semantic-release version

@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 # Project metadata
 [project]
 name = "ciopen"
-version = "0.0.4"
+version = "0.0.6"
 description = "Open CI pipelines from your current Git repository"
 readme = { file = "README.md", content-type = "text/markdown" }
 license = "MIT"
@@ -37,9 +37,11 @@ dev = [
 [tool.semantic_release]
 branch = "main"
 version_source = "tag"
-upload_to_pypi = false
 major_on_zero = true
+upload_to_pypi = false
 changelog_file = "CHANGELOG.md"
+commit_message = "✨ Bump to version {version}"
+commit_parser = "conventional"
 
 version_toml = [
     "pyproject.toml:project.version",
@@ -47,7 +49,8 @@ version_toml = [
 
 # Optional: override commit parsing
 [tool.semantic_release.commit_parser_options]
-patch_types = ["fix", "chore", "docs", "style", "refactor", "test"]
-minor_types = ["feat"]
+ignore_breaking_changes = true
+patch_tags = ["fix", "chore", "docs", "style", "refactor", "test"]
+minor_tags = ["feat"]
 # Will never be used while major_on_zero = false
 major_types = ["feat!"]
