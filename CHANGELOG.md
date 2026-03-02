@@ -2,6 +2,27 @@
 
 <!-- version list -->
 
+## v0.1.0 (2026-03-02)
+
+### Continuous Integration
+
+- Revert since jobs have awkward labels
+  ([`8b9c3cc`](https://github.com/mel-cdn/ciopen/commit/8b9c3cccb71f4ff5605089af6c6ac7451f818e7c))
+
+- Use name alias from caller workflow
+  ([`05ca591`](https://github.com/mel-cdn/ciopen/commit/05ca59158d37ddfe6ed072e1cdd5e09236a0b18b))
+
+### Documentation
+
+- Update PyPi and GitHub docs
+  ([`2ff6b27`](https://github.com/mel-cdn/ciopen/commit/2ff6b279a0dfe24e150b90dbfbf9114858a0b6e0))
+
+### Features
+
+- **cli**: Add `info` command
+  ([`34edbdc`](https://github.com/mel-cdn/ciopen/commit/34edbdcb09d7b56e8c4292349e0ce2c7dc61bf16))
+
+
 ## v0.0.8 (2026-03-02)
 
 ### Chores
