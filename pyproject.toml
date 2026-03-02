@@ -68,7 +68,6 @@ dev = [
 [tool.semantic_release]
 branch = "main"
 version_source = "tag"
-major_on_zero = false
 allow_zero_version = true
 upload_to_pypi = false
 changelog_file = "CHANGELOG.md"
@@ -82,5 +81,4 @@ version_toml = [
 [tool.semantic_release.commit_parser_options]
 patch_tags = ["fix", "chore", "docs", "style", "refactor", "test"]
 minor_tags = ["feat"]
-# Will never be used while major_on_zero = false
-major_tags = []
+major_tags = ["feat!"]
