@@ -1,0 +1,30 @@
+name: Bump Version
+on:
+  workflow_call:
+
+
+
+jobs:
+  bump-version:
+    name: Bump Version
+    runs-on: ubuntu-latest
+    environment:
+      name: build
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install semantic-release
+        run: |
+          pip install python-semantic-release==10.5.3
+
+      - name: Bump version
+        run: semantic-release version
+        env:
+          GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}

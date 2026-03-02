@@ -50,7 +50,7 @@ version_toml = [
 
 # Optional: override commit parsing
 [tool.semantic_release.commit_parser_options]
-patch_tags = ["fix", "chore", "docs", "style", "refactor", "test", "ci"]
+patch_tags = ["fix", "chore", "docs", "style", "refactor", "test"]
 minor_tags = ["feat"]
 # Will never be used while major_on_zero = false
 major_tags = []

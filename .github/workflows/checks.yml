@@ -1,0 +1,11 @@
+name: Checks
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  lint-test:
+    name: Tests and Lint
+    uses: ./.github/workflows/lint-tests.yml
