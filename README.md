@@ -30,7 +30,7 @@ $ ciopen
 
 ### Requirements:
 
-- Python >=3.10
+- Python >=3.11
 - Git installed and available in your PATH
 - Access to the Git remote of the repository you want to open
 
@@ -58,23 +58,23 @@ Show helpful CLI documentation:
 ```bash
 $ ciopen --help
 
- Usage: ciopen [OPTIONS] COMMAND [ARGS]...
+Usage: ciopen [OPTIONS] COMMAND [ARGS]...
 
- Quickly open CI pipelines from your Git repository.
+Quickly open CI pipelines from your Git repository.
 
- ╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
- │ --install-completion          Install completion for the current shell                                        │
- │ --show-completion             Show completion for the current shell, to copy it or customize the installation.│
- │ --help                        Show this message and exit                                                      │
- ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
- ╭─ Commands ────────────────────────────────────────────────────────────────────────────────────────────────────╮
- │ version   Show ciopen version                                                                                 │
- │ info      Show ciopen information                                                                             │
- │ doctor    Check if everything is set up right                                                                 │
- │ provider  Show which CI provider is detected                                                                  │
- │ repo      Open the main page of this repository                                                               │
- │ pr        Open the pull requests page of this repository                                                      │
- ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell                                        │
+│ --show-completion             Show completion for the current shell, to copy it or customize the installation.│
+│ --help                        Show this message and exit                                                      │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ version   Show ciopen version                                                                                 │
+│ info      Show ciopen information                                                                             │
+│ doctor    Check if everything is set up right                                                                 │
+│ provider  Show which CI provider is detected                                                                  │
+│ repo      Open the main page of this repository                                                               │
+│ pr        Open the pull requests page of this repository                                                      │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
 Open your repository's main page:
@@ -82,7 +82,7 @@ Open your repository's main page:
 ```bash
 $ ciopen repo
 
- Opening https://github.com/mel-cdn/ciopen
+Opening https://github.com/mel-cdn/ciopen
 ```
 
 Check if it's going to work with diagnostics:
@@ -90,22 +90,22 @@ Check if it's going to work with diagnostics:
 ```bash
 $ ciopen doctor
 
- ciopen 0.0.5
- Running diagnostics...
+ciopen 0.1.0
+Running diagnostics...
 
-  ✅ Git installed
-  ✅ Inside a Git repository
-  ✅ Remote origin found
-  ✅ CI Provider detected
+✅ Git installed
+✅ Inside a Git repository
+✅ Remote origin found
+✅ CI Provider detected
 
- Environment details:
+Environment details:
 
- Provider                : GitHub
- Repository slug         : mel-cdn/ciopen
- Current branch          : main
- Repository URL          : https://github.com/mel-cdn/ciopen
- Pipeline URL            : https://github.com/mel-cdn/ciopen/actions
- Pull Request URL        : https://github.com/mel-cdn/ciopen/pulls
+Provider                : GitHub
+Repository slug         : mel-cdn/ciopen
+Current branch          : main
+Repository URL          : https://github.com/mel-cdn/ciopen
+Pipeline URL            : https://github.com/mel-cdn/ciopen/actions
+Pull Request URL        : https://github.com/mel-cdn/ciopen/pulls
 ```
 
 ---
