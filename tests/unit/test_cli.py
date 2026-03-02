@@ -10,6 +10,7 @@ def test_cli_help_lists_commands():
 
     # Ensure commands are registered (don’t overfit exact help formatting)
     assert "version" in result.stdout
+    assert "info" in result.stdout
     assert "doctor" in result.stdout
     assert "provider" in result.stdout
     assert "repo" in result.stdout
