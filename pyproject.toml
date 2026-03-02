@@ -37,7 +37,8 @@ dev = [
 [tool.semantic_release]
 branch = "main"
 version_source = "tag"
-major_on_zero = true
+major_on_zero = false
+allow_zero_version = true
 upload_to_pypi = false
 changelog_file = "CHANGELOG.md"
 commit_message = "✨ Bump to version {version}"
@@ -49,8 +50,7 @@ version_toml = [
 
 # Optional: override commit parsing
 [tool.semantic_release.commit_parser_options]
-ignore_breaking_changes = true
-patch_tags = ["fix", "chore", "docs", "style", "refactor", "test"]
+patch_tags = ["fix", "chore", "docs", "style", "refactor", "test", "ci"]
 minor_tags = ["feat"]
 # Will never be used while major_on_zero = false
-major_types = ["feat!"]
+major_tags = []
