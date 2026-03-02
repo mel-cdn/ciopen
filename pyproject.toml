@@ -1,9 +1,13 @@
+# -----------------------------
 # Build system
+# -----------------------------
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=69"]
 build-backend = "setuptools.build_meta"
 
-# Project metadata
+# -----------------------------
+# Project metadata (PyPI)
+# -----------------------------
 [project]
 name = "ciopen"
 version = "0.0.8"
@@ -12,19 +16,44 @@ readme = { file = "README.md", content-type = "text/markdown" }
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [
-    { name = "Mel Cadano", email = "mel.cdn@outlook.ph" },
+    { name = "Mel Cadano", email = "mel.cdn@outlook.ph" }
 ]
-
 requires-python = ">=3.11"
+
+keywords = ["cli", "ci", "github-actions", "devtools", "automation"]
+
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Environment :: Console",
+    "Topic :: Software Development :: Build Tools",
+]
 dependencies = [
-    "typer>=0.24.1"
+    "typer>=0.12"
 ]
 
-# CLI entry points
+# -----------------------------
+# CLI entry point
+# -----------------------------
 [project.scripts]
 ciopen = "ciopen.cli:app"
 
-# Dev dependencies
+# -----------------------------
+# Project links (shown on PyPI)
+# -----------------------------
+[project.urls]
+Homepage = "https://github.com/mel-cdn/ciopen"
+Repository = "https://github.com/mel-cdn/ciopen"
+Issues = "https://github.com/mel-cdn/ciopen/issues"
+Changelog = "https://github.com/mel-cdn/ciopen/blob/main/CHANGELOG.md"
+
+# -----------------------------
+# Optional Dev dependencies
+# -----------------------------
 [project.optional-dependencies]
 dev = [
     "pytest==9.0.2",
@@ -33,7 +62,9 @@ dev = [
     "conventional-pre-commit==4.4.0",
 ]
 
-# Semantic versioning
+# -----------------------------
+# Semantic Release Configuration
+# -----------------------------
 [tool.semantic_release]
 branch = "main"
 version_source = "tag"
@@ -48,7 +79,6 @@ version_toml = [
     "pyproject.toml:project.version",
 ]
 
-# Optional: override commit parsing
 [tool.semantic_release.commit_parser_options]
 patch_tags = ["fix", "chore", "docs", "style", "refactor", "test"]
 minor_tags = ["feat"]

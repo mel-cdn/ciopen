@@ -21,7 +21,7 @@ Check out the docs:
 Open CI pipeline on your default browser:
 
 ```bash
-ciopen
+$ ciopen
 ```
 
 ---
@@ -37,16 +37,16 @@ ciopen
 ### Using `pip`
 
 ```bash
-pip install ciopen
+$ pip install ciopen
 ```
 
 ### Using pip (editable / dev mode)
 
 ```bash
-git clone https://github.com/mel-cdn/ciopen.git
-cd ciopen
-pipenv shell        # or activate your virtualenv
-./run-checks.sh      # Install all dependencies
+$ git clone https://github.com/mel-cdn/ciopen.git
+$ cd ciopen
+$ pipenv shell        # or activate your virtualenv
+$ ./run-checks.sh      # Install all dependencies
 ```
 
 ---
@@ -56,7 +56,7 @@ pipenv shell        # or activate your virtualenv
 Show helpful CLI documentation:
 
 ```bash
-ciopen --help
+$ ciopen --help
 
  Usage: ciopen [OPTIONS] COMMAND [ARGS]...
 
@@ -69,6 +69,7 @@ ciopen --help
  ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
  ╭─ Commands ────────────────────────────────────────────────────────────────────────────────────────────────────╮
  │ version   Show ciopen version                                                                                 │
+ │ info      Show ciopen information                                                                             │
  │ doctor    Check if everything is set up right                                                                 │
  │ provider  Show which CI provider is detected                                                                  │
  │ repo      Open the main page of this repository                                                               │
@@ -79,7 +80,7 @@ ciopen --help
 Open your repository's main page:
 
 ```bash
-ciopen repo
+$ ciopen repo
 
  Opening https://github.com/mel-cdn/ciopen
 ```
@@ -87,7 +88,7 @@ ciopen repo
 Check if it's going to work with diagnostics:
 
 ```bash
-ciopen doctor
+$ ciopen doctor
 
  ciopen 0.0.5
  Running diagnostics...
