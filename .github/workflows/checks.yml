@@ -7,4 +7,5 @@ on:
 
 jobs:
   lint-tests:
+    name: Lint and Tests
     uses: ./.github/workflows/lint-tests.yml

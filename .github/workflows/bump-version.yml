@@ -2,11 +2,8 @@ name: Bump Version
 on:
   workflow_call:
 
-
-
 jobs:
   bump-version:
-    name: Bump Version
     runs-on: ubuntu-latest
     environment:
       name: build

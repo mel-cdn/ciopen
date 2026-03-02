@@ -5,9 +5,11 @@ on:
 
 jobs:
   lint-tests:
+    name: Lint and Tests
     uses: ./.github/workflows/lint-tests.yml
 
   bump-version:
+    name: Bump Version
     needs: lint-tests
     uses: ./.github/workflows/bump-version.yml
     secrets: inherit
