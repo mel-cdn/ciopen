@@ -11,7 +11,7 @@ pre-commit install --hook-type commit-msg
 pre-commit run --all-files
 
 echo "> Running tests..."
-./run-tests.sh
+./scripts/run-tests.sh
 
 echo "> Running integration tests..."
 export PYTHONPATH=src
