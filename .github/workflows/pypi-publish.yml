@@ -10,10 +10,10 @@ jobs:
   # Publish
   # ---------------------------------
   publish:
-    name: Publish to PyPI
+    name: PiPy Publish
     runs-on: ubuntu-latest
     environment:
-      name: deployment  # Will require manual approval if environment has protection rules
+      name: publish  # Will require manual approval if environment has protection rules
     steps:
       - name: Checkout
         uses: actions/checkout@v4

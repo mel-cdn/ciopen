@@ -6,6 +6,5 @@ on:
       - synchronize
 
 jobs:
-  lint-test:
-    name: Tests and Lint
+  lint-tests:
     uses: ./.github/workflows/lint-tests.yml

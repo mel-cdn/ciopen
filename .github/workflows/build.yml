@@ -4,13 +4,11 @@ on:
     branches: [ main ]
 
 jobs:
-  lint-test:
-    name: Tests and Lint
+  lint-tests:
     uses: ./.github/workflows/lint-tests.yml
 
   bump-version:
-    name: Bump Version
-    needs: lint-test
+    needs: lint-tests
     uses: ./.github/workflows/bump-version.yml
     secrets: inherit
     permissions:
