@@ -25,7 +25,7 @@ jobs:
 
       - name: Run unit tests
         run: |
-          ./run-tests.sh
+          ./scripts/run-tests.sh
 
       - name: Run integration tests
         run: |

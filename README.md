@@ -44,8 +44,8 @@ $ pip install ciopen
 ```bash
 $ git clone https://github.com/mel-cdn/ciopen.git
 $ cd ciopen
-$ pipenv shell          # or activate your virtualenv
-$ ./run-checks.sh       # Install all dependencies
+$ pipenv shell                  # or activate your virtualenv
+$ ./scripts/run-checks.sh       # Install all dependencies
 ```
 
 ---
