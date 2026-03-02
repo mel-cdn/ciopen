@@ -10,7 +10,7 @@ build-backend = "setuptools.build_meta"
 # -----------------------------
 [project]
 name = "ciopen"
-version = "0.1.0"
+version = "0.1.1"
 description = "Open CI pipelines from your current Git repository"
 readme = { file = "README.md", content-type = "text/markdown" }
 license = "MIT"

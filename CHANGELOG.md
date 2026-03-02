@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.1 (2026-03-02)
+
+### Documentation
+
+- Update Python required version
+  ([`4787610`](https://github.com/mel-cdn/ciopen/commit/478761050cb1fa74aa6dd4a35b03180777b19ae5))
+
+
 ## v0.1.0 (2026-03-02)
 
 ### Continuous Integration
