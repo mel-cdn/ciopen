@@ -2,6 +2,22 @@
 
 <!-- version list -->
 
+## v0.1.2 (2026-03-02)
+
+### Continuous Integration
+
+- Move all scripts to `scripts/`
+  ([`3ebd93b`](https://github.com/mel-cdn/ciopen/commit/3ebd93bf60be8dd2578d390a2f3191e05d9b925a))
+
+- Remove major_on_zero because allow_zero_version is the key to 0.x.y
+  ([`9622ad1`](https://github.com/mel-cdn/ciopen/commit/9622ad1eed42f78093ff4da30b734bd734210cf7))
+
+### Documentation
+
+- Remove required access as you don't really need to have
+  ([`af1c7e5`](https://github.com/mel-cdn/ciopen/commit/af1c7e58fe71a5feb16d60aa04419faae0002237))
+
+
 ## v0.1.1 (2026-03-02)
 
 ### Documentation
