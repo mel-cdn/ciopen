@@ -4,6 +4,7 @@ on:
 
 jobs:
   bump-version:
+    name: Bump Version
     runs-on: ubuntu-latest
     environment:
       name: build
