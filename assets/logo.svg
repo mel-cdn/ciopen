@@ -1,0 +1,21 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ciopen logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="4" y="4" width="192" height="192" rx="40" fill="url(#bg)" stroke="#30363d" stroke-width="2"/>
+
+  <!-- terminal prompt chevron -->
+  <path d="M56 76 L92 100 L56 124" fill="none" stroke="#3ddc97" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- cursor -->
+  <rect x="100" y="114" width="40" height="14" rx="4" fill="#3ddc97"/>
+
+  <!-- open / external-link arrow -->
+  <g stroke="#58a6ff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M124 50 H154 V80"/>
+    <path d="M154 50 L112 92"/>
+  </g>
+</svg>

@@ -1,4 +1,8 @@
-# ciopen
+<p align="center">
+  <img src="assets/logo.svg" alt="ciopen logo" width="140">
+</p>
+
+<h1 align="center">ciopen</h1>
 
 ![Python](https://img.shields.io/badge/python-3.11+-blue?logo=python&logoColor=yellow)
 [![PyPI](https://img.shields.io/pypi/v/ciopen?logo=pypi&logoColor=blue)](https://pypi.org/project/ciopen/)
@@ -18,7 +22,7 @@ Check out the docs:
 
 ## ⚡ Features
 
-Open CI pipeline on your default browser:
+Open CI pipeline in your default browser:
 
 ```bash
 $ ciopen
@@ -45,7 +49,7 @@ $ pip install ciopen
 $ git clone https://github.com/mel-cdn/ciopen.git
 $ cd ciopen
 $ pipenv shell                  # or activate your virtualenv
-$ ./scripts/run-checks.sh       # Install all dependencies
+$ ./scripts/run-checks.sh       # Install dependencies and run checks
 ```
 
 ---
@@ -61,19 +65,19 @@ Usage: ciopen [OPTIONS] COMMAND [ARGS]...
 
 Quickly open CI pipelines from your Git repository.
 
-╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ --install-completion          Install completion for the current shell                                        │
-│ --show-completion             Show completion for the current shell, to copy it or customize the installation.│
-│ --help                        Show this message and exit                                                      │
-╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-╭─ Commands ────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ version   Show ciopen version                                                                                 │
-│ info      Show ciopen information                                                                             │
-│ doctor    Check if everything is set up right                                                                 │
-│ provider  Show which CI provider is detected                                                                  │
-│ repo      Open the main page of this repository                                                               │
-│ pr        Open the pull requests page of this repository                                                      │
-╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell.                                              │
+│ --show-completion             Show completion for the current shell, to copy it or customize the installation.       │
+│ --help                        Show this message and exit.                                                            │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ version   Show ciopen version                                                                                        │
+│ info      Show ciopen information                                                                                    │
+│ doctor    Check if everything is set up right                                                                        │
+│ provider  Show which CI provider is detected                                                                         │
+│ repo      Open the main page of this repository                                                                      │
+│ pr        Open the pull requests page of this repository                                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
 Open your repository's main page:
@@ -84,12 +88,12 @@ $ ciopen repo
 Opening https://github.com/mel-cdn/ciopen
 ```
 
-Check if it's going to work with diagnostics:
+Run diagnostics to check everything is set up right:
 
 ```bash
 $ ciopen doctor
 
-ciopen 0.1.0
+ciopen 0.1.2
 Running diagnostics...
 
 ✅ Git installed
@@ -118,7 +122,7 @@ Pull Request URL        : https://github.com/mel-cdn/ciopen/pulls
 
 ## 🔮 Future Plans
 
-- Add support for custom CI/CD providers e.g. CircleCI, Jenkins, AWS CodeBuild, etc.
+- Add support for custom CI/CD providers, e.g., CircleCI, Jenkins, AWS CodeBuild, etc.
 - JSON output for scripts and automation
 - Auto-detect Git branch and multiple pipelines
 - Additional CLI shortcuts for common CI/CD tasks
@@ -133,7 +137,7 @@ All contributions are welcome — whether it’s new features, bug fixes, or imp
 
 1. Clone the repository: `git clone https://github.com/mel-cdn/ciopen.git`
 2. Create a new branch: `git checkout -b my-new-feature`
-3. Install dependencies: `./run-checks.sh`
+3. Install dependencies: `./scripts/run-checks.sh`
 4. Make your changes
 5. Submit a pull request
 
