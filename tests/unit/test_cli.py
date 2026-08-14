@@ -15,3 +15,4 @@ def test_cli_help_lists_commands():
     assert "provider" in result.stdout
     assert "repo" in result.stdout
     assert "pr" in result.stdout
+    assert "jira" in result.stdout
