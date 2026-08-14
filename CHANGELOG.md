@@ -2,6 +2,24 @@
 
 <!-- version list -->
 
+## v0.2.0 (2026-08-14)
+
+### Chores
+
+- Add local install script for dev't
+  ([`4c10479`](https://github.com/mel-cdn/ciopen/commit/4c1047910bd55865901fa95f8aa6c17cc86e3e87))
+
+### Documentation
+
+- Add ciopen jira examples
+  ([`452ba11`](https://github.com/mel-cdn/ciopen/commit/452ba111460af7a538e433b5227a6b362bb2637e))
+
+### Features
+
+- **cli**: Add jira command
+  ([`9f9301f`](https://github.com/mel-cdn/ciopen/commit/9f9301f59d0584034691d71dd6ac1af98e4306f3))
+
+
 ## v0.1.3 (2026-08-14)
 
 ### Continuous Integration
