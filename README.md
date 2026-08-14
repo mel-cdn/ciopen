@@ -77,8 +77,32 @@ Quickly open CI pipelines from your Git repository.
 │ provider  Show which CI provider is detected                                                                         │
 │ repo      Open the main page of this repository                                                                      │
 │ pr        Open the pull requests page of this repository                                                             │
+│ jira      Open the Jira ticket linked to the current branch                                                          │
 ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
+
+Set your Jira base URL once, then open the ticket linked to your current branch:
+
+```bash
+$ ciopen jira set-base-url https://your-org.atlassian.net
+Jira base URL set to https://your-org.atlassian.net
+
+$ ciopen jira show
+Jira base URL: https://your-org.atlassian.net
+
+$ ciopen jira unset-base-url
+Jira base URL unset.
+
+$ ciopen jira set-base-url https://your-org.atlassian.net
+Jira base URL set to https://your-org.atlassian.net
+
+$ git checkout -b feature/JIRA-1234-add-login
+$ ciopen jira
+Opening https://your-org.atlassian.net/browse/JIRA-1234
+```
+
+`ciopen jira` looks for an uppercase ticket key (e.g. `JIRA-1234`) anywhere in the current
+branch name — `JIRA-1234-branch-name`, `JIRA-1234_branch_name`, `feature/JIRA-1234` all work.
 
 Open your repository's main page:
 
@@ -139,7 +163,11 @@ All contributions are welcome — whether it’s new features, bug fixes, or imp
 2. Create a new branch: `git checkout -b my-new-feature`
 3. Install dependencies: `./scripts/run-checks.sh`
 4. Make your changes
-5. Submit a pull request
+5. Run it locally — the editable install from step 3 puts `ciopen` on your `PATH`:
+   ```bash
+   $ ciopen <command>
+   ```
+6. Submit a pull request
 
 ---
 Made with ❤️ for developers who love fast, terminal-first CI access.
