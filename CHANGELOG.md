@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.1.3 (2026-08-14)
+
+### Continuous Integration
+
+- Rename semantic-release commit author to Version Release Bot
+  ([`4e7420b`](https://github.com/mel-cdn/ciopen/commit/4e7420b56eafc78a1532f3d445135c6f44a9cbef))
+
+### Documentation
+
+- Add logo and polish README
+  ([`22dfaf4`](https://github.com/mel-cdn/ciopen/commit/22dfaf44e6b190a3be829b72363f25ec0092d466))
+
+
 ## v0.1.2 (2026-03-02)
 
 ### Continuous Integration
